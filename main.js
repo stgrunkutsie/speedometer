@@ -8,3 +8,8 @@ function massiveCreate()
         i++;
     }
 }
+
+function setSpeed(speed)
+{
+    
+}

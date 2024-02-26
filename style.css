@@ -45,6 +45,28 @@
     top: 165px;
     left: -15px;
 }
+.arrow-container {
+    width: 160px;
+    height: 160px;
+    top: 67px;
+    left: 67px;
+    position: absolute;
+    background-color: transparent;
+}
+.arrow-wrapper {
+    width: 160px;
+    height: 160px;
+    background-color: transparent;
+    position: relative;
+}
+.arrow {
+    background-color: red;
+    position: relative;
+    width: 110px;
+    height: 5px;
+    top: 78px;
+    left: -30px;
+}
 
 .speedometer-notch {
     width: 8px;
@@ -107,4 +129,12 @@
 }
 .notch19 {
     transform: rotate(90deg);
+}
+
+.notch1.active {
+    background-color: green;
+}
+
+.notch19.active {
+    background-color: red;
 }
