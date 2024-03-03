@@ -1,140 +1,236 @@
-* {
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing:border-box;
 }
 
-.speedometer-container {
+.speedometer-container{
     width: 300px;
-    height: 300px;
+    height:300px;
     border: 3px solid black;
     border-radius: 50%;
     margin: 50px auto;
     position: relative;
 }
-.center-point {
-    width: 20px;
-    height: 20px;
+
+.center-point{
+    width:20px;
+    height:20px;
     background-color: black;
     border-radius: 50%;
     position: absolute;
-    top: 137px;
+    top:137px;
     left: 137px;
+    z-index: 10;
 }
-.hiddenCircle {
+
+.speedometer-notch{
+    width: 8px;
+    height: 280px;
+    background-color: black;
+    position:absolute;
+    left: 143px;
+    top:7px;
+    transform: rotate(-90deg);
+}
+.speedometer-center-hide {
     width: 250px;
     height: 250px;
-    margin: 22px auto;
     background-color: white;
     border-radius: 50%;
-    position: relative;
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    z-index: 9;
 }
-.hiddenSquare {
-    width: 900px;
-    height: 300px;
+
+.speedometer-bottom-hide {
+    width: 320px;
+    height: 250px;
     background-color: white;
     position: absolute;
-    top: 165px;
-    left: -10px;
+    z-index: 11;
+    top: 160px;
+    left: -14px;
+    border-top: 1px solid;
 }
-.bottomLine {
-    background-color: black;
-    width: 325px;
-    height: 5px;
-    position: absolute;
-    top: 165px;
-    left: -15px;
-}
+
 .arrow-container {
     width: 160px;
     height: 160px;
+    background-color: transparent;
+    position: absolute;
+    z-index: 12;
     top: 67px;
     left: 67px;
-    position: absolute;
-    background-color: transparent;
 }
+
 .arrow-wrapper {
     width: 160px;
     height: 160px;
     background-color: transparent;
     position: relative;
+    transition: all 0.4s;
+    transform: rotate(0deg);
+    transform-origin: center;
 }
+
 .arrow {
-    background-color: red;
-    position: relative;
     width: 110px;
-    height: 5px;
+    height: 4px;
+    background-color: purple;
+    position: absolute;
     top: 78px;
     left: -30px;
 }
+.accelerate-container {
+    margin-top: 120px;
+    text-align: center;
+}
+.accelerate-container button {
+    width: 200px;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #c6c6c6;
+    color: white;
+}
+.speed30{
+    background-color: green;
+}
+.speed90{
+    background-color: orange;
+}
+.speed180{
+    background-color: red;
+}
+.reset{
+    background-color: purple;
+}
 
-.speedometer-notch {
-    width: 8px;
-    height: 280px;
-    background-color: black;
-    position: absolute;
-    left: 143px;
-    top: 7px;
+.accelerate-container button:active {
+    box-shadow: 5px 5px 5px #ffffff;
 }
-.notch1 {
-    transform: rotate(-90deg);
+
+.notch1{
+    transform:  rotate(-90deg) ;
 }
-.notch2 {
-    transform: rotate(-80deg);
+.notch2{
+    transform:  rotate(-80deg) ;
 }
-.notch3 {
-    transform: rotate(-70deg);
+.notch3{
+    transform:  rotate(-70deg) ;
 }
-.notch4 {
-    transform: rotate(-60deg);
+.notch4{
+    transform:  rotate(-60deg) ;
 }
-.notch5 {
-    transform: rotate(-50deg);
+.notch5{
+    transform:  rotate(-50deg) ;
 }
-.notch6 {
-    transform: rotate(-40deg);
+.notch6{
+    transform:  rotate(-40deg) ;
 }
-.notch7 {
-    transform: rotate(-30deg);
+.notch7{
+    transform:  rotate(-30deg) ;
 }
-.notch8 {
-    transform: rotate(-20deg);
+.notch8{
+    transform:  rotate(-20deg) ;
 }
-.notch9 {
-    transform: rotate(-10deg);
+.notch9{
+    transform:  rotate(-10deg) ;
 }
-.notch11 {
-    transform: rotate(10deg);
+.notch10{
+    transform:  rotate(0deg) ;
 }
-.notch12 {
-    transform: rotate(20deg);
+.notch11{
+    transform:  rotate(10deg) ;
 }
-.notch13 {
-    transform: rotate(30deg);
+.notch12{
+    transform:  rotate(20deg) ;
 }
-.notch14 {
-    transform: rotate(40deg);
+.notch13{
+    transform:  rotate(30deg) ;
 }
-.notch15 {
-    transform: rotate(50deg);
+.notch14{
+    transform:  rotate(40deg) ;
 }
-.notch16 {
-    transform: rotate(60deg);
+.notch15{
+    transform:  rotate(50deg) ;
 }
-.notch17 {
-    transform: rotate(70deg);
+.notch16{
+    transform:  rotate(60deg) ;
 }
-.notch18 {
-    transform: rotate(80deg);
+.notch17{
+    transform:  rotate(70deg) ;
 }
-.notch19 {
-    transform: rotate(90deg);
+.notch18{
+    transform:  rotate(80deg) ;
+}
+.notch19{
+    transform:  rotate(90deg) ;
+    height: 244px;
+    top: 25px;
+    left: 161px;
 }
 
 .notch1.active {
     background-color: green;
 }
-
+.notch2.active {
+    background-color: rgb(8, 181, 8);
+}
+.notch3.active {
+    background-color: rgb(21, 202, 21);
+}
+.notch4.active {
+    background-color: rgb(43, 244, 43);
+}
+.notch5.active {
+    background-color: rgb(79, 251, 79);
+}
+.notch6.active {
+    background-color: rgb(133, 251, 79);
+}
+.notch7.active {
+    background-color: rgb(199, 251, 79);
+}
+.notch8.active {
+    background-color: rgb(228, 251, 79);
+}
+.notch9.active {
+    background-color: rgb(251, 251, 79);
+}
+.notch10.active {
+    background-color: rgb(251, 234, 79);
+}
+.notch11.active {
+    background-color: rgb(251, 205, 79);
+}
+.notch12.active {
+    background-color: rgb(251, 168, 79);
+}
+.notch13.active {
+    background-color: rgb(251, 139, 79);
+}
+.notch14.active {
+    background-color: rgb(251, 122, 79);
+}
+.notch15.active {
+    background-color: rgb(251, 99, 79);
+}
+.notch16.active {
+    background-color: rgb(251, 90, 79);
+}
+.notch17.active {
+    background-color: rgb(247, 61, 47);
+}
+.notch18.active {
+    background-color: rgb(247, 47, 47);
+}
 .notch19.active {
-    background-color: red;
+    background-color: rgb(255, 0, 0);
 }

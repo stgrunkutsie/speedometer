@@ -1,47 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
-    <title>:3</title> 
+    <script src="main.js"></script>
+    <link href="style.css" rel="stylesheet" />
+    <title>:3</title>
 </head>
 <body onload="massiveCreate()">
     <div class="speedometer-container">
-        <div class="speedometer-notch"></div>
-        <div class="speedometer-notch"></div>
-        <div class="speedometer-notch"></div>
-        <div class="speedometer-notch"></div>
-        <div class="speedometer-notch"></div>
-        <div class="speedometer-notch"></div>
-        <div class="speedometer-notch"></div>
-        <div class="speedometer-notch"></div>
-        <div class="speedometer-notch"></div>
-        <div class="speedometer-notch"></div>
-        <div class="speedometer-notch"></div>
-        <div class="speedometer-notch"></div>
-        <div class="speedometer-notch"></div>
-        <div class="speedometer-notch"></div>
-        <div class="speedometer-notch"></div>
-        <div class="speedometer-notch"></div>
-        <div class="speedometer-notch"></div>
-        <div class="speedometer-notch"></div>
-        <div class="speedometer-notch"></div>
-
-        <div class="hiddenCircle"></div>
-        <div class="hiddenSquare"></div>
-        <div class="bottomLine"></div>
-
+        <div class="center-point"></div>
+        <div class="speedometer-center-hide"></div>
+        <div class="speedometer-bottom-hide"></div>
         <div class="arrow-container">
-            <div class="arrow-wrapper">
+            <div class="arrow-wrapper speed-0">
                 <div class="arrow"></div>
             </div>
         </div>
-
         <div class="center-point"></div>
     </div>
-
-    <button class="speed90" onclick="setSpeed(90)">Velocità a 90</button>
+    <div class="accelerate-container">
+        <button onclick="setSpeed_GIGACHAD(30)" class="speed30">Velocità 30</button>
+        <button onclick="setSpeed_GIGACHAD(90)" class="speed90">Velocità 90</button>
+        <button onclick="setSpeed_GIGACHAD(180)" class="speed180">Velocità 180</button><br>
+        <button onclick="setSpeed_GIGACHAD(0)" class="reset">Resetta Velocità</button>
+    </div>
 </body>
 </html>
