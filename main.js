@@ -1,4 +1,4 @@
-const numberOfNotches = 19;
+const numberOfNotches = 18;
 
 function massiveCreate(){
     let container = document.getElementsByClassName("speedometer-container")[0];   
@@ -13,6 +13,7 @@ function massiveCreate(){
 
 function setSpeed_GIGACHAD(speed) {
     const arrowWrapper = document.querySelector('.arrow-wrapper');
+    const speedNumber = document.querySelector('.speedometer-number');
     const notches = document.querySelectorAll('.speedometer-notch');
 
     arrowWrapper.style.transform = `rotate(${speed}deg)`; 
@@ -27,6 +28,7 @@ function setSpeed_GIGACHAD(speed) {
         {
             notches[i].classList.remove("active");
         }
+        speedNumber.innerHTML = speed + "km/h";
     }
     else if (speed == 90)
     {
@@ -38,6 +40,7 @@ function setSpeed_GIGACHAD(speed) {
         {
             notches[i].classList.remove("active");
         }
+        speedNumber.innerHTML = speed + "km/h";
     }
     else if (speed == 180)
     {
@@ -45,6 +48,7 @@ function setSpeed_GIGACHAD(speed) {
         {
             notches[i].classList.add("active");
         }
+        speedNumber.innerHTML = speed + "km/h";
     }
     else
     {
@@ -52,5 +56,6 @@ function setSpeed_GIGACHAD(speed) {
         {
             notches[i].classList.remove("active");
         }
+        speedNumber.innerHTML = speed + "km/h";
     }
 }
